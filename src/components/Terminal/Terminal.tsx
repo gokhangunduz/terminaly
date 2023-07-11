@@ -4,18 +4,46 @@ import React, { ReactElement } from "react";
 import { ReactTerminal } from "react-terminal";
 import TerminalLine from "../TerminalLine/TerminalLine";
 import TerminalPreformattedLine from "../TerminalPreformattedLine/TerminalPreformattedLine";
+import { me } from "@/types/types";
+import { getIP } from "@/apis/apis";
 
 export default function Terminal(): ReactElement {
-  const me = {
+  const me: me = {
     firstName: "Gökhan",
     lastName: "Gündüz",
-    age: 24,
-    email: "mail@gokhangunduz.com.tr",
     title: "Frontend Developer",
+    email: "mail@gokhangunduz.com.tr",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "Phyton",
+      "React",
+      "Next.js",
+      "Express.js",
+      "WordPress",
+      "MySQL",
+      "Selenium",
+      "Docker",
+      "Linux",
+    ],
+    socials: {
+      github: "github.com/gokhangunduz",
+      linkedin: "linkedin.com/in/iamgokhangunduz",
+      email: "mail@gokhangunduz.com.tr",
+    },
   };
 
   const commands = {
     whoami: <TerminalPreformattedLine stdout={JSON.stringify(me, null, 1)} />,
+    whatsmyip: <TerminalLine stdout={getIP() || ""} />,
+    reload: () => {
+      window.location.reload();
+    },
+    help: (
+      <TerminalLine stdout="Available commands: whoami, whatsmyip, reload, help" />
+    ),
   };
 
   return (
@@ -32,7 +60,7 @@ export default function Terminal(): ReactElement {
       showControlBar={false}
       showControlButtons={false}
       welcomeMessage={
-        <TerminalLine stdout="Hello, if you want to know more about me, type whoami." />
+        <TerminalLine stdout="Hello, if you want to know more about me, type whoami. If you want to see all commands, type help." />
       }
       commands={commands}
       defaultHandler={(command: string) => {

@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 
 interface ITerminalLine {
-  stdout: string;
+  stdout: string | Promise<string>;
 }
 
 export default function TerminalLine({ stdout }: ITerminalLine): ReactElement {
