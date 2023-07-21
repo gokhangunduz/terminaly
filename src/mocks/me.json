@@ -1,0 +1,26 @@
+{
+  "firstName": "Gökhan",
+  "lastName": "Gündüz",
+  "title": "Frontend Developer",
+  "email": "mail@gokhangunduz.com.tr",
+  "skills": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "Phyton",
+    "React",
+    "Next.js",
+    "Express.js",
+    "WordPress",
+    "MySQL",
+    "Selenium",
+    "Docker",
+    "Linux"
+  ],
+  "socials": {
+    "github": "github.com/gokhangunduz",
+    "linkedin": "linkedin.com/in/iamgokhangunduz",
+    "email": "mail@gokhangunduz.com.tr"
+  }
+}

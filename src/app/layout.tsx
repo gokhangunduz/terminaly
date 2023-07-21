@@ -1,6 +1,8 @@
 import React, { ReactElement } from "react";
 import "@/styles/global.css";
 import "animate.css";
+import MainProvider from "@/providers/MainProvider";
+import MainLayout from "@/layouts/MainLayout";
 
 export default function RootLayout({
   children,
@@ -24,7 +26,11 @@ export default function RootLayout({
           backgroundColor: "#000",
         }}
       >
-        <main className="w-screen h-screen">{children}</main>
+        <main className="w-screen h-screen">
+          <MainProvider>
+            <MainLayout>{children}</MainLayout>
+          </MainProvider>
+        </main>
       </body>
     </html>
   );

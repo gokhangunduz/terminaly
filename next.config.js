@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  env: {
+    IP_TOKEN: process.env.IP_TOKEN,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

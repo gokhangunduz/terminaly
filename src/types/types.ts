@@ -10,3 +10,19 @@ export type me = {
     email: string;
   };
 };
+
+export type ipDetails = {
+  city: string;
+  country: string;
+  ip: string;
+  loc: string;
+  org: string;
+  postal: string;
+  region: string;
+  timezone: string;
+};
+
+export type IuseMainContext = {
+  me: me;
+  ipDetails: ipDetails;
+};

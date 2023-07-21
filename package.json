@@ -1,11 +1,16 @@
 {
   "name": "gokhangunduz.com.tr",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "private": true,
-  "author": "Gökhan Gündüz",
+  "author": {
+    "name": "Gökhan Gündüz",
+    "email": "mail@gokhangunduz.com.tr"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
