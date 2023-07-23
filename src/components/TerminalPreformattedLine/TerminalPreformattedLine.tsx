@@ -8,6 +8,8 @@ export default function TerminalPreformattedLine({
   stdout,
 }: ITerminalPreformattedLine): ReactElement {
   return (
-    <pre class="text-sm whitespace-pre-wrap break-normal w-full">{stdout}</pre>
+    <pre className="text-sm whitespace-pre-wrap break-normal w-full">
+      {stdout}
+    </pre>
   );
 }
