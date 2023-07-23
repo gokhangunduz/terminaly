@@ -9,15 +9,92 @@
     "JavaScript",
     "TypeScript",
     "Phyton",
-    "React",
+    "React.js",
     "Next.js",
     "Express.js",
     "WordPress",
     "MySQL",
     "Selenium",
     "Docker",
-    "Linux"
+    "Linux",
+    "Git"
   ],
+
+  "experiences": [
+    {
+      "company": "robolaunch",
+      "title": "Frontend Developer",
+      "date": "Feb 2022 - Present",
+      "description": "Developed the frontend of robolaunch.cloud, a Cloud-Native Robotics Platform that provides the end-to-end infrastructure, software stack and tools for developing, simulating, deploying and operating ROS/ROS2 robots at scale."
+    },
+    {
+      "company": "CERS Digital Agency",
+      "title": "Frontend && WordPress Developer",
+      "date": "May 2021 - Nov 2021",
+      "description": "Developed WordPress themes and plugins for various clients."
+    },
+    {
+      "company": "Apple",
+      "title": "Technical Expert",
+      "date": "Sep 2020 - May 2021",
+      "description": "Provided technical repair and support for Apple products."
+    },
+    {
+      "company": "Ones Technology",
+      "title": "Frontend Developer (Internship)",
+      "date": "Jun 2019 - Agu 2019",
+      "description": "Learned professional frontend development and worked on various projects."
+    }
+  ],
+
+  "educations": [
+    {
+      "school": "Anadolu University",
+      "title": "Management Information Systems",
+      "date": "Sep 2018 - Agu 2023",
+      "degree": "Bachelor's Degree"
+    },
+    {
+      "school": "N.Erbakan University",
+      "title": "Computer Programming",
+      "date": "Sep 2018 - Jul 2020",
+      "degree": "Associate's Degree"
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "reawind",
+      "description": "reawind is an open source project that allows users to quickly create a ready-made blog and portfolio site. This project was developed using technologies such as React, TypeScript, Tailwind and Markdown.",
+      "url": "github.com/gokhangunduz/reawind",
+      "live": "https://reawind.vercel.app"
+    },
+    {
+      "name": "Alpha VS Theme",
+      "description": "Alpha Theme is a modern and minimalist Visual Studio Code (VSC) theme. It offers a carefully selected color palette and an easy-on-the-eyes design to enhance your coding experience. It provides a perfect look in dark mode.",
+      "url": "github.com/gokhangunduz/alpha-theme",
+      "live": "https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha"
+    },
+    {
+      "name": "robolaunch UI",
+      "description": "robolaunch is a Cloud-Native Robotics Platform that provides the end-to-end infrastructure, software stack and tools for developing, simulating, deploying and operating ROS/ROS2 robots at scale.",
+      "url": "github.com/robolaunch/-ui",
+      "live": "https://robolaunch.cloud"
+    },
+    {
+      "name": "robolaunch Keycloak Theme",
+      "description": "Developed a custom theme for Keycloak, an open source Identity and Access Management solution. This theme is used in robolaunch.cloud.",
+      "url": "github.com/robolaunch/keycloak-theme",
+      "live": "https://robolaunch.cloud"
+    },
+    {
+      "name": "robolaunch VS Theme",
+      "description": "robolaunch VS Theme is a modern and minimalist Visual Studio Code (VSC) theme. It offers a carefully selected color palette and an easy-on-the-eyes design to enhance your coding experience. It provides a perfect look in dark mode.",
+      "url": "github.com/robolaunch/vs-theme",
+      "live": "https://marketplace.visualstudio.com/items?itemName=gokhangunduz.robolaunch"
+    }
+  ],
+
   "socials": {
     "github": "github.com/gokhangunduz",
     "linkedin": "linkedin.com/in/iamgokhangunduz",
