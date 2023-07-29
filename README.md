@@ -1,34 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Terminal-like Website
 
-## Getting Started
+This repository is my personal website. It is designed with a terminal-like interface and provides users with information through various commands.
 
-First, run the development server:
+## Live/Demo Website
+You can visit the live website at: [gokhangunduz.com.tr](https://gokhangunduz.com.tr)
+
+## Technologies Used
+- Next.js: We developed a web application using [Next.js](https://nextjs.org/), a React-based framework.
+- React.js: We used [React.js](https://reactjs.org/) to build the user interface.
+- Tailwind CSS: [Tailwind CSS](https://tailwindcss.com/) was used to style the pages, resulting in a simple and fast design.
+
+## How It Works?
+
+The web page accepts terminal-like commands from the user and provides specific information in response to these commands.
+
+Sample Commands:
+- `whoami`: Displays information about the user.
+- `whatsmyip`: Shows the user's current IP address with detail.
+- `clear`: Clear of stdin, stdout and stderr on terminal.
+- `help`: Shows all avaliable commands.
+- ...
+
+## Installation
+
+Clone this repository to your local machine
+
+```bash
+git clone https://github.com/gokhangunduz/gokhangunduz.com.tr.git
+```
+
+Install all dependencies
+
+```bash
+npm install
+```
+
+Start this project for development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be running at localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contributing
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+I welcome contributions of any kind. If you find a bug or have new features in mind, please submit a pull request.
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
