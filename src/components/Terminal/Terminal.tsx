@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactElement} from "react";
+import React, { ReactElement } from "react";
 import { ReactTerminal } from "react-terminal";
 import TerminalLine from "../TerminalLine/TerminalLine";
 import TerminalPreformattedLine from "../TerminalPreformattedLine/TerminalPreformattedLine";
@@ -35,12 +35,9 @@ export default function Terminal(): ReactElement {
       theme="ggTheme"
       showControlBar={false}
       showControlButtons={false}
-      welcomeMessage={
-        <TerminalLine stdout="Hello, if you want to know more about me, type whoami. If you want to see all commands, type help." />
-      }
       commands={commands}
       defaultHandler={(command: string) => {
-        return `${command} command is blocked.`;
+        return `"${command}" command is blocked. If you want to see all commands, type "help".`;
       }}
     />
   );
