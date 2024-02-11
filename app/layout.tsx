@@ -1,9 +1,6 @@
 "use client";
 
 import { ReactElement } from "react";
-import "@/styles/global.css";
-import "animate.css";
-import MainProvider from "@/providers/app.provider";
 import MainLayout from "@/layouts/main.layout";
 
 export default function RootLayout({
@@ -23,10 +20,8 @@ export default function RootLayout({
         <title>Gökhan Gündüz</title>
         <meta name="description" content="Hi! I'm Gökhan Gündüz" />
       </head>
-      <body className="w-screen h-screen bg-black">
-        <MainProvider>
-          <MainLayout>{children}</MainLayout>
-        </MainProvider>
+      <body>
+        <MainLayout>{children}</MainLayout>
       </body>
     </html>
   );

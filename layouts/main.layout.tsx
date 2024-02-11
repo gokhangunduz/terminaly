@@ -1,6 +1,11 @@
 "use client";
 
 import { ReactElement } from "react";
+import MainProvider from "../contexts/main.context";
+import { TerminalContextProvider as TerminalProvider } from "react-terminal";
+import VersionViewer from "@/components/versionviewer/versionviewer.component";
+import "@/styles/global.css";
+import "animate.css";
 
 interface IMainLayout {
   children: ReactElement | ReactElement[];
@@ -8,8 +13,11 @@ interface IMainLayout {
 
 export default function MainLayout({ children }: IMainLayout) {
   return (
-    <div className="w-screen h-screen animate__animated animate__fadeIn animate__slower">
-      {children}
-    </div>
+    <MainProvider>
+      <TerminalProvider>
+        {children}
+        <VersionViewer />
+      </TerminalProvider>
+    </MainProvider>
   );
 }

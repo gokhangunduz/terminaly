@@ -9,7 +9,6 @@ export async function getIPwithInfo(): Promise<IiPInfo | undefined> {
     try {
       const publicIP = await getIP();
       const ipDetails = await getIpInfo(publicIP!);
-
       resolve(ipDetails);
     } catch (error) {
       reject(error);

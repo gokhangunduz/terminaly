@@ -8,8 +8,8 @@ You can visit the live website at: [gokhangunduz.dev](https://gokhangunduz.dev)
 
 ## Technologies Used
 
-- Next.js: We developed a web application using [Next.js](https://nextjs.org/), a React-based framework.
-- React.js: We used [React.js](https://reactjs.org/) to build the user interface.
+- Next.js: I developed a web application using [Next.js](https://nextjs.org/), a React-based framework.
+- React.js: I used [React.js](https://reactjs.org/) to build the user interface.
 - Tailwind CSS: [Tailwind CSS](https://tailwindcss.com/) was used to style the pages, resulting in a simple and fast design.
 
 ## How It Works?

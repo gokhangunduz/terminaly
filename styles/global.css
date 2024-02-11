@@ -6,6 +6,10 @@
   display: none;
 }
 
+.hw-screen {
+  @apply h-screen w-screen;
+}
+
 div {
   @apply !text-sm !top-[1px];
 }

@@ -1,9 +1,11 @@
 "use client";
 
+import { disableRightClick } from "@/functions/rightclick.function";
+import { disableDevTools } from "@/functions/devtools.function";
+import { useEffect, createContext, useState } from "react";
 import { getIPwithInfo } from "../apis/apis";
 import { IiPInfo } from "../types/types";
 import me from "@/constants/me.json";
-import { useEffect, createContext, useState } from "react";
 
 export const MainContext: any = createContext<any>(null);
 
@@ -12,10 +14,10 @@ export default ({ children }: any) => {
   const [ipInfo, setIpInfo] = useState<IiPInfo>();
 
   useEffect(() => {
-    if (!ipInfo) {
-      getIP();
-    }
-  }, [ipInfo]);
+    disableRightClick();
+    disableDevTools();
+    getIP();
+  }, []);
 
   async function getIP() {
     setIpInfo(await getIPwithInfo());
