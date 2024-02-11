@@ -1,10 +1,10 @@
 "use client";
 
 import { ReactElement, useEffect } from "react";
-import MainProvider from "@/context/main.context";
+import MainProvider from "../contexts/main.context";
 import { TerminalContextProvider as TerminalProvider } from "react-terminal";
-import VersionViewer from "@/components/VersionViewer/VersionViewer";
-import { disableRightClick } from "@/functions/rightclick.function";
+import VersionViewer from "../components/VersionViewer/VersionViewer";
+import { disableRightClick } from "../functions/rightclick.function";
 
 interface IAppProvider {
   children: ReactElement | ReactElement[];

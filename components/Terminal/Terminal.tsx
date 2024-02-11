@@ -4,7 +4,7 @@ import { ReactElement } from "react";
 import { ReactTerminal } from "react-terminal";
 import TerminalBasicLine from "../TerminalBasicLine/TerminalBasicLine";
 import TerminalPreformattedLine from "../TerminalPreformattedLine/TerminalPreformattedLine";
-import useApp from "@/hooks/useApp";
+import useApp from "../../hooks/useApp";
 import themes from "@/themes/themes.json";
 
 export default function Terminal(): ReactElement {

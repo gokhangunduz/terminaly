@@ -1,7 +1,7 @@
 "use client";
 
-import { getIPwithInfo } from "@/apis/apis";
-import { IiPInfo } from "@/types/types";
+import { getIPwithInfo } from "../apis/apis";
+import { IiPInfo } from "../types/types";
 import me from "@/constants/me.json";
 import { useEffect, createContext, useState } from "react";
 

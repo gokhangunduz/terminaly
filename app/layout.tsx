@@ -23,16 +23,10 @@ export default function RootLayout({
         <title>Gökhan Gündüz</title>
         <meta name="description" content="Hi! I'm Gökhan Gündüz" />
       </head>
-      <body
-        style={{
-          backgroundColor: "#000",
-        }}
-      >
-        <main className="w-screen h-screen">
-          <MainProvider>
-            <MainLayout>{children}</MainLayout>
-          </MainProvider>
-        </main>
+      <body className="w-screen h-screen bg-black">
+        <MainProvider>
+          <MainLayout>{children}</MainLayout>
+        </MainProvider>
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactElement } from "react";
-import packageJSON from "../../../package.json";
+import packageJSON from "../../package.json";
 
 export default function VersionViewer(): ReactElement {
   return (

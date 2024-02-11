@@ -1,7 +1,7 @@
 "use client";
 
-import { ipToken } from "@/providers/env.provider";
-import { IiPInfo } from "@/types/types";
+import { ipToken } from "../providers/env.provider";
+import { IiPInfo } from "../types/types";
 import axios from "axios";
 
 export async function getIPwithInfo(): Promise<IiPInfo | undefined> {
@@ -21,10 +21,10 @@ export async function getIP(): Promise<string | undefined> {
   return new Promise(async (resolve, reject) => {
     try {
       const {
-        data: { ip: publicIP },
+        data: publicIP,
       }: {
-        data: { ip: string | undefined };
-      } = await axios.get("https://api.ipify.org?format=json");
+        data: string | undefined;
+      } = await axios.get(`https://ipinfo.io/ip?token=${ipToken}`);
       resolve(publicIP);
     } catch (error) {
       reject(error);
