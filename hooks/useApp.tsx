@@ -1,11 +1,11 @@
 "use client";
 
 import { useContext } from "react";
-import { MainContext } from "../contexts/main.context";
+import { AppContext } from "../contexts/app.context";
 import { IuseApp } from "../types/types";
 
 const useApp = () => {
-  const useApp: IuseApp = useContext(MainContext);
+  const useApp: IuseApp = useContext(AppContext);
 
   return useApp;
 };

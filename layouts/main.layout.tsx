@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactElement } from "react";
-import MainProvider from "../contexts/main.context";
+import MainProvider from "../contexts/app.context";
 import { TerminalContextProvider as TerminalProvider } from "react-terminal";
 import VersionViewer from "@/components/versionviewer/versionviewer.component";
 import "@/styles/global.css";

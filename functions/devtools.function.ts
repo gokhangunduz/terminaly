@@ -23,5 +23,5 @@ function devToolsIsOpen() {
     "items-center",
     "text-sm"
   );
-  document.body.innerHTML = `<p>Devtools is not allowed.</p>`;
+  document.body.innerHTML = `<p>Developer Tools is not allowed.</p>`;
 }
