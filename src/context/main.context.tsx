@@ -1,23 +1,25 @@
 "use client";
 
 import { getIPAndDetails } from "@/apis/apis";
-import { ipDetails } from "@/types/types";
-import me from "@/mocks/me.json";
+import { IipDetails } from "@/types/types";
+import me from "@/constants/me.json";
 import { useEffect, createContext, useState } from "react";
 
 export const MainContext: any = createContext<any>(null);
 
 // eslint-disable-next-line
 export default ({ children }: any) => {
-  const [ipDetails, setIpDetails] = useState<ipDetails>();
+  const [ipDetails, setIpDetails] = useState<IipDetails>();
 
   useEffect(() => {
     if (!ipDetails) {
-      getIPAndDetails().then((res) => {
-        setIpDetails(res);
-      });
+      getIP();
     }
   }, [ipDetails]);
+
+  async function getIP() {
+    setIpDetails(await getIPAndDetails());
+  }
 
   return (
     <MainContext.Provider value={{ me, ipDetails }}>

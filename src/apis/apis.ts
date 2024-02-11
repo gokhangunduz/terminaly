@@ -1,17 +1,50 @@
 "use client";
 
-import { ipDetails } from "@/types/types";
+import { ipToken } from "@/providers/env.provider";
+import { IipDetails } from "@/types/types";
+import axios from "axios";
 
-export async function getIPAndDetails(): Promise<ipDetails | undefined> {
-  try {
-    const { ip }: { ip: string } = await fetch(
-      "https://api.ipify.org?format=json"
-    ).then((res) => res.json());
+export async function getIPAndDetails(): Promise<IipDetails | undefined> {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const publicIP = await getIP();
+      const ipDetails = await getIPDetails(publicIP!);
 
-    return fetch(`https://ipinfo.io/${ip}?token=${process.env.IP_TOKEN}`).then(
-      (res) => res.json()
-    );
-  } catch (error: any) {
-    return undefined;
-  }
+      resolve(ipDetails);
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
+export async function getIP(): Promise<string | undefined> {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const {
+        data: { ip: publicIP },
+      }: {
+        data: { ip: string | undefined };
+      } = await axios.get("https://api.ipify.org?format=json");
+      resolve(publicIP);
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
+export async function getIPDetails(
+  publicIP: string
+): Promise<IipDetails | undefined> {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const {
+        data: ipDetails,
+      }: {
+        data: IipDetails | undefined;
+      } = await axios.get(`https://ipinfo.io/${publicIP}?token=${ipToken}`);
+      resolve(ipDetails);
+    } catch (error) {
+      reject(error);
+    }
+  });
 }

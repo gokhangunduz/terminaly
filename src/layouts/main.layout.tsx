@@ -1,6 +1,5 @@
 "use client";
 
-import VersionViewer from "@/components/VersionViewer/VersionViewer";
 import { ReactElement } from "react";
 
 interface IMainLayout {
@@ -9,8 +8,7 @@ interface IMainLayout {
 
 export default function MainLayout({ children }: IMainLayout) {
   return (
-    <div className="w-full h-full animate__animated animate__fadeIn animate__slower">
-      <VersionViewer />
+    <div className="w-screen h-screen animate__animated animate__fadeIn animate__slower">
       {children}
     </div>
   );

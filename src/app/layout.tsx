@@ -3,8 +3,8 @@
 import { ReactElement } from "react";
 import "@/styles/global.css";
 import "animate.css";
-import MainProvider from "@/providers/MainProvider";
-import MainLayout from "@/layouts/MainLayout";
+import MainProvider from "@/providers/app.provider";
+import MainLayout from "@/layouts/main.layout";
 
 export default function RootLayout({
   children,

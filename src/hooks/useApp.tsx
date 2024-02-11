@@ -1,7 +1,7 @@
 "use client";
 
 import { useContext } from "react";
-import { MainContext } from "@/context/MainContext";
+import { MainContext } from "@/context/main.context";
 import { IuseApp } from "@/types/types";
 
 const useApp = () => {

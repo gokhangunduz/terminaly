@@ -2,9 +2,10 @@
 
 import { ReactElement } from "react";
 import { ReactTerminal } from "react-terminal";
-import TerminalLine from "../TerminalLine/TerminalLine";
+import TerminalBasicLine from "../TerminalBasicLine/TerminalBasicLine";
 import TerminalPreformattedLine from "../TerminalPreformattedLine/TerminalPreformattedLine";
 import useApp from "@/hooks/useApp";
+import themes from "@/themes/themes.json";
 
 export default function Terminal(): ReactElement {
   const { ipDetails, me } = useApp();
@@ -18,21 +19,15 @@ export default function Terminal(): ReactElement {
       window.location.reload();
     },
     help: (
-      <TerminalLine stdout="Available commands: whoami, whatsmyip, reload, help" />
+      <TerminalBasicLine stdout="Available commands: whoami, whatsmyip, reload, help" />
     ),
   };
 
   return (
     <ReactTerminal
       prompt={"gokhangunduz@gg:"}
-      themes={{
-        ggTheme: {
-          themeBGColor: "#000",
-          themeColor: "#3EF379",
-          themePromptColor: "#FFF",
-        },
-      }}
-      theme="ggTheme"
+      themes={themes}
+      theme="gg"
       showControlBar={false}
       showControlButtons={false}
       commands={commands}

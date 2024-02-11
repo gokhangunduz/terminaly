@@ -2,10 +2,12 @@
 
 import { ReactElement } from "react";
 
-interface ITerminalLine {
+interface ITerminalBasicLine {
   stdout: string | Promise<string>;
 }
 
-export default function TerminalLine({ stdout }: ITerminalLine): ReactElement {
+export default function TerminalBasicLine({
+  stdout,
+}: ITerminalBasicLine): ReactElement {
   return <p className="text-sm">{stdout}</p>;
 }

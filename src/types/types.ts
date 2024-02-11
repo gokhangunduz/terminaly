@@ -1,6 +1,6 @@
 "use client";
 
-export type me = {
+export type Ime = {
   firstName: string;
   lastName: string;
   title: string;
@@ -13,7 +13,7 @@ export type me = {
   };
 };
 
-export type ipDetails = {
+export type IipDetails = {
   city: string;
   country: string;
   ip: string;
@@ -25,6 +25,8 @@ export type ipDetails = {
 };
 
 export type IuseApp = {
-  me: me;
-  ipDetails: ipDetails;
+  me: Ime;
+  ipDetails: IipDetails;
 };
+
+export type IipToken = string | undefined;
