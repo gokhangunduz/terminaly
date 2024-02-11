@@ -1,3 +1,5 @@
+"use client";
+
 import { ipDetails } from "@/types/types";
 
 export async function getIPAndDetails(): Promise<ipDetails | undefined> {

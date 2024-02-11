@@ -3,9 +3,11 @@
 This repository is my personal website. It is designed with a terminal-like interface and provides users with information through various commands.
 
 ## Live/Demo Website
-You can visit the live website at: [gokhangunduz.com.tr](https://gokhangunduz.com.tr)
+
+You can visit the live website at: [gokhangunduz.dev](https://gokhangunduz.dev)
 
 ## Technologies Used
+
 - Next.js: We developed a web application using [Next.js](https://nextjs.org/), a React-based framework.
 - React.js: We used [React.js](https://reactjs.org/) to build the user interface.
 - Tailwind CSS: [Tailwind CSS](https://tailwindcss.com/) was used to style the pages, resulting in a simple and fast design.
@@ -15,6 +17,7 @@ You can visit the live website at: [gokhangunduz.com.tr](https://gokhangunduz.co
 The web page accepts terminal-like commands from the user and provides specific information in response to these commands.
 
 Sample Commands:
+
 - `whoami`: Displays information about the user.
 - `whatsmyip`: Shows the user's current IP address with detail.
 - `clear`: Clear of stdin, stdout and stderr on terminal.
@@ -26,7 +29,7 @@ Sample Commands:
 Clone this repository to your local machine
 
 ```bash
-git clone https://github.com/gokhangunduz/gokhangunduz.com.tr.git
+git clone https://github.com/gokhangunduz/gokhangunduz.dev.git
 ```
 
 Install all dependencies

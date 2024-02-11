@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactElement, useEffect } from "react";
+import { ReactElement, useEffect } from "react";
 
 export default function DisableRightClick(): ReactElement {
   useEffect(() => {

@@ -1,4 +1,6 @@
-import React, { ReactElement } from "react";
+"use client";
+
+import { ReactElement } from "react";
 
 interface ITerminalLine {
   stdout: string | Promise<string>;

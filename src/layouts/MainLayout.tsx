@@ -1,5 +1,7 @@
+"use client";
+
 import VersionViewer from "@/components/VersionViewer/VersionViewer";
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 
 interface IMainLayout {
   children: ReactElement | ReactElement[];

@@ -1,4 +1,6 @@
-import React, { ReactElement } from "react";
+"use client";
+
+import { ReactElement } from "react";
 import "@/styles/global.css";
 import "animate.css";
 import MainProvider from "@/providers/MainProvider";

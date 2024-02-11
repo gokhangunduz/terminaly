@@ -1,7 +1,8 @@
-import React, { ReactElement } from "react";
+"use client";
+
+import { ReactElement } from "react";
 import Terminal from "@/components/Terminal/Terminal";
 
 export default function HomePage(): ReactElement {
-
-  return (<Terminal />);
+  return <Terminal />;
 }

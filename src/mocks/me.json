@@ -2,7 +2,7 @@
   "firstName": "Gökhan",
   "lastName": "Gündüz",
   "title": "Frontend Developer",
-  "email": "me@gokhangunduz.com.tr",
+  "email": "me@gokhangunduz.dev",
 
   "skills": [
     "Next.JS",
@@ -105,6 +105,6 @@
   "socials": {
     "github": "github.com/gokhangunduz",
     "linkedin": "linkedin.com/in/iamgokhangunduz",
-    "email": "me@gokhangunduz.com.tr"
+    "email": "me@gokhangunduz.dev"
   }
 }

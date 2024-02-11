@@ -1,3 +1,5 @@
+"use client";
+
 export type me = {
   firstName: string;
   lastName: string;
@@ -22,7 +24,7 @@ export type ipDetails = {
   timezone: string;
 };
 
-export type IuseMainContext = {
+export type IuseApp = {
   me: me;
   ipDetails: ipDetails;
 };

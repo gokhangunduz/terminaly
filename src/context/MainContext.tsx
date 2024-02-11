@@ -3,7 +3,7 @@
 import { getIPAndDetails } from "@/apis/apis";
 import { ipDetails } from "@/types/types";
 import me from "@/mocks/me.json";
-import React, { useEffect, createContext, useState } from "react";
+import { useEffect, createContext, useState } from "react";
 
 export const MainContext: any = createContext<any>(null);
 

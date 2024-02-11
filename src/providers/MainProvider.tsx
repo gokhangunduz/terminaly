@@ -1,17 +1,19 @@
-import React, { ReactElement } from "react";
-import MainContext from "@/context/MainContext";
-import TerminalProvider from "./TerminalProvider";
-import DisableRightClick from "@/utils/DisableRightClick";
+"use client";
 
-interface IMainProvider {
+import { ReactElement } from "react";
+import MainProvider from "@/context/MainContext";
+import DisableRightClick from "@/utils/DisableRightClick";
+import { TerminalContextProvider as TerminalProvider } from "react-terminal";
+
+interface IAppProvider {
   children: ReactElement | ReactElement[];
 }
 
-export default function MainProvider({ children }: IMainProvider) {
+export default function AppProvider({ children }: IAppProvider) {
   return (
-    <MainContext>
+    <MainProvider>
       <DisableRightClick />
       <TerminalProvider>{children}</TerminalProvider>
-    </MainContext>
+    </MainProvider>
   );
 }

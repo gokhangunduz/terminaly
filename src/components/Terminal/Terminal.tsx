@@ -1,13 +1,13 @@
 "use client";
 
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 import { ReactTerminal } from "react-terminal";
 import TerminalLine from "../TerminalLine/TerminalLine";
 import TerminalPreformattedLine from "../TerminalPreformattedLine/TerminalPreformattedLine";
-import useMainContext from "@/hooks/useMainContext";
+import useApp from "@/hooks/useApp";
 
 export default function Terminal(): ReactElement {
-  const { ipDetails, me } = useMainContext();
+  const { ipDetails, me } = useApp();
 
   const commands = {
     whoami: <TerminalPreformattedLine stdout={JSON.stringify(me, null, 1)} />,
