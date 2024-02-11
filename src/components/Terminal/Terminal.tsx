@@ -8,12 +8,12 @@ import useApp from "@/hooks/useApp";
 import themes from "@/themes/themes.json";
 
 export default function Terminal(): ReactElement {
-  const { ipDetails, me } = useApp();
+  const { ipInfo, me } = useApp();
 
   const commands = {
     whoami: <TerminalPreformattedLine stdout={JSON.stringify(me, null, 1)} />,
     whatsmyip: (
-      <TerminalPreformattedLine stdout={JSON.stringify(ipDetails, null, 1)} />
+      <TerminalPreformattedLine stdout={JSON.stringify(ipInfo, null, 1)} />
     ),
     reload: () => {
       window.location.reload();

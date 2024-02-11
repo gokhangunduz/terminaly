@@ -1,7 +1,7 @@
 "use client";
 
-import { getIPAndDetails } from "@/apis/apis";
-import { IipDetails } from "@/types/types";
+import { getIPwithInfo } from "@/apis/apis";
+import { IiPInfo } from "@/types/types";
 import me from "@/constants/me.json";
 import { useEffect, createContext, useState } from "react";
 
@@ -9,20 +9,20 @@ export const MainContext: any = createContext<any>(null);
 
 // eslint-disable-next-line
 export default ({ children }: any) => {
-  const [ipDetails, setIpDetails] = useState<IipDetails>();
+  const [ipInfo, setIpInfo] = useState<IiPInfo>();
 
   useEffect(() => {
-    if (!ipDetails) {
+    if (!ipInfo) {
       getIP();
     }
-  }, [ipDetails]);
+  }, [ipInfo]);
 
   async function getIP() {
-    setIpDetails(await getIPAndDetails());
+    setIpInfo(await getIPwithInfo());
   }
 
   return (
-    <MainContext.Provider value={{ me, ipDetails }}>
+    <MainContext.Provider value={{ me, ipInfo }}>
       {children}
     </MainContext.Provider>
   );

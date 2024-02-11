@@ -1,14 +1,14 @@
 "use client";
 
 import { ipToken } from "@/providers/env.provider";
-import { IipDetails } from "@/types/types";
+import { IiPInfo } from "@/types/types";
 import axios from "axios";
 
-export async function getIPAndDetails(): Promise<IipDetails | undefined> {
+export async function getIPwithInfo(): Promise<IiPInfo | undefined> {
   return new Promise(async (resolve, reject) => {
     try {
       const publicIP = await getIP();
-      const ipDetails = await getIPDetails(publicIP!);
+      const ipDetails = await getIpInfo(publicIP!);
 
       resolve(ipDetails);
     } catch (error) {
@@ -32,17 +32,17 @@ export async function getIP(): Promise<string | undefined> {
   });
 }
 
-export async function getIPDetails(
+export async function getIpInfo(
   publicIP: string
-): Promise<IipDetails | undefined> {
+): Promise<IiPInfo | undefined> {
   return new Promise(async (resolve, reject) => {
     try {
       const {
-        data: ipDetails,
+        data: ipInfo,
       }: {
-        data: IipDetails | undefined;
+        data: IiPInfo | undefined;
       } = await axios.get(`https://ipinfo.io/${publicIP}?token=${ipToken}`);
-      resolve(ipDetails);
+      resolve(ipInfo);
     } catch (error) {
       reject(error);
     }

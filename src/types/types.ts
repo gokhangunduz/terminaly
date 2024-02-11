@@ -13,7 +13,7 @@ export type Ime = {
   };
 };
 
-export type IipDetails = {
+export type IiPInfo = {
   city: string;
   country: string;
   ip: string;
@@ -26,7 +26,7 @@ export type IipDetails = {
 
 export type IuseApp = {
   me: Ime;
-  ipDetails: IipDetails;
+  ipInfo: IiPInfo;
 };
 
 export type IipToken = string | undefined;
