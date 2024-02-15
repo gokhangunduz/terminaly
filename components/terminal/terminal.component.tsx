@@ -1,11 +1,11 @@
 "use client";
 
-import { ReactElement } from "react";
+import PreformattedLine from "@/components/terminal.preformattedline/terminal.preformattedline.component";
+import BasicLine from "@/components/terminal.basicline/terminal.basicline.component";
 import { ReactTerminal } from "react-terminal";
-import BasicLine from "../terminal.basicline/terminal.basicline.component";
-import PreformattedLine from "../terminal.preformattedline/terminal.preformattedline.component";
-import useApp from "../../hooks/useApp";
 import themes from "@/themes/themes.json";
+import { ReactElement } from "react";
+import useApp from "@/hooks/useApp";
 
 export default function Terminal(): ReactElement {
   const { ipInfo, me } = useApp();
@@ -22,20 +22,18 @@ export default function Terminal(): ReactElement {
   };
 
   return (
-    <div className="hw-screen bg-black">
-      <div className="hw-screen animate__animated animate__fadeIn animate__slower">
-        <ReactTerminal
-          prompt={"gokhangunduz@gg:"}
-          themes={themes}
-          theme="gg"
-          showControlBar={false}
-          showControlButtons={false}
-          commands={commands}
-          defaultHandler={(command: string) => {
-            return `"${command}" command is blocked. If you want to see all commands, type "help".`;
-          }}
-        />
-      </div>
+    <div className="hw-screen animate__animated animate__fadeIn animate__slower">
+      <ReactTerminal
+        prompt={"gokhangunduz@gg:"}
+        themes={themes}
+        theme="gg"
+        showControlBar={false}
+        showControlButtons={false}
+        commands={commands}
+        defaultHandler={(command: string) => {
+          return `"${command}" command is blocked. If you want to see all commands, type "help".`;
+        }}
+      />
     </div>
   );
 }

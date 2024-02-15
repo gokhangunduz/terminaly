@@ -1,4 +1,5 @@
 FROM node:latest as build-stage
+ARG IP_TOKEN
 COPY . /app
 WORKDIR /app
 RUN npm install

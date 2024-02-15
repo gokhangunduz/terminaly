@@ -1,8 +1,8 @@
 "use client";
 
-import { useContext } from "react";
 import { AppContext } from "../contexts/app.context";
-import { IuseApp } from "../types/types";
+import { IuseApp } from "@/types/types";
+import { useContext } from "react";
 
 const useApp = () => {
   const useApp: IuseApp = useContext(AppContext);

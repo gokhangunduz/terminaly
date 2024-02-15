@@ -1,28 +1,17 @@
 "use client";
 
-import { ReactElement } from "react";
 import MainLayout from "@/layouts/main.layout";
+import DOMProvider from "@/providers/dom.provider";
+import { ReactElement } from "react";
 
-export default function RootLayout({
+export default function HomeLayout({
   children,
 }: {
   children: ReactElement | ReactElement[];
 }) {
   return (
-    <html lang="en">
-      <head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
-        />
-        <meta name="theme-color" content="#000" />
-        <link rel="icon" href="/favicon.ico" />
-        <title>Gökhan Gündüz</title>
-        <meta name="description" content="Hi! I'm Gökhan Gündüz" />
-      </head>
-      <body>
-        <MainLayout>{children}</MainLayout>
-      </body>
-    </html>
+    <DOMProvider>
+      <MainLayout>{children}</MainLayout>
+    </DOMProvider>
   );
 }

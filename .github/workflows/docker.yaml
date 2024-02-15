@@ -1,0 +1,32 @@
+name: Docker
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Extract Version from package.json
+        id: project_version
+        run: echo "::set-output name=version::$(node -e 'console.log(require("./package.json").version)')"
+
+      - name: Build the Docker Image
+        run: |
+          docker build \
+            --file Dockerfile \
+            --tag gokhangunduz/gokhangunduzdev:${{ steps.project_version.outputs.version }} \
+            --build-arg IP_TOKEN=${{ secrets.IP_TOKEN }} \
+            .
+
+      - name: Login to Docker Hub
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Push the Docker Image to Docker Hub
+        run: docker push gokhangunduz/gokhangunduzdev:${{ steps.project_version.outputs.version }}
