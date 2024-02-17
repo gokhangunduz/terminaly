@@ -3,7 +3,7 @@ ARG IP_TOKEN
 COPY . /app
 WORKDIR /app
 RUN npm install -s
-RUN npm run export
+RUN npm run build
 FROM nginx:alpine as production-stage
 COPY --from=build-stage /app/out /usr/share/nginx/html
 EXPOSE 80
