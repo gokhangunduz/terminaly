@@ -1,10 +1,10 @@
-# Personal Terminal-like Website
+# Terminal-like Website
 
-This repository is my personal website. It is designed with a terminal-like interface and provides users with information through various commands.
+This repository is resume website. It is designed with a terminal-like interface and provides users with information through various commands.
 
 ## Live/Demo Website
 
-You can visit the live website at: [gokhangunduz.dev](https://gokhangunduz.dev)
+You can visit the live website at: [terminaly.vercel.app](https://terminaly.vercel.app/)
 
 ## Technologies Used
 
@@ -29,7 +29,7 @@ Sample Commands:
 Clone this repository to your local machine
 
 ```bash
-git clone https://github.com/gokhangunduz/gokhangunduz.dev.git
+git clone https://github.com/gokhangunduz/terminaly.git
 ```
 
 Install all dependencies
