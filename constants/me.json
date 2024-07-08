@@ -37,9 +37,14 @@
 
   "experiences": [
     {
-      "company": "robolaunch",
+      "company": "Presidency of Defense Industries of the Republic of Türkiye",
       "title": "Frontend Developer",
-      "date": "Feb 2022 - Present"
+      "date": "Jun 2024 - Present"
+    },
+    {
+      "company": "robolaunch",
+      "title": "Full Stack Developer",
+      "date": "Feb 2022 - May 2024"
     },
     {
       "company": "CERS Digital Agency",
@@ -104,7 +109,7 @@
 
   "socials": {
     "github": "github.com/gokhangunduz",
-    "linkedin": "linkedin.com/in/iamgokhangunduz",
+    "linkedin": "linkedin.com/in/gokhangunduzdev",
     "email": "me@gokhangunduz.dev"
   }
 }
