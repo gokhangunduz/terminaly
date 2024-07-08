@@ -9,5 +9,5 @@ interface ITerminalBasicLine {
 export default function TerminalBasicLine({
   stdout,
 }: ITerminalBasicLine): ReactElement {
-  return <p className="text-sm">{stdout}</p>;
+  return <p className="text-base">{stdout}</p>;
 }

@@ -10,7 +10,7 @@ export default function TerminalPreformattedLine({
   stdout,
 }: ITerminalPreformattedLine): ReactElement {
   return (
-    <pre className="text-sm whitespace-pre-wrap break-normal w-full">
+    <pre className="text-base whitespace-pre-wrap break-normal w-full">
       {stdout}
     </pre>
   );

@@ -21,7 +21,7 @@ function devToolsIsOpen() {
     "flex",
     "justify-center",
     "items-center",
-    "text-sm"
+    "text-base"
   );
   document.body.innerHTML = `<p>Developer Tools is not allowed.</p>`;
 }
