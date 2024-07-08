@@ -11,9 +11,9 @@
 }
 
 div {
-  @apply !text-sm !top-[1px];
+  @apply !top-[1px];
 }
 
 span {
-  @apply !text-sm !top-[1px] !h-4 !w-2;
+  @apply !top-[1px] !h-4 !w-2;
 }
