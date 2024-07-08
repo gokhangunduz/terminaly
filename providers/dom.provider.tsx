@@ -11,7 +11,7 @@ export default function DOMProvider({ children }: IDOMProvider): ReactElement {
       <Head>
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
         />
         <meta name="theme-color" content="#000" />
         <link rel="icon" href="/favicon.ico" />
