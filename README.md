@@ -21,10 +21,12 @@ Sample Commands:
 - `whoami`: Displays information about the user.
 - `whatsmyip`: Shows the user's current IP address with detail.
 - `clear`: Clear of stdin, stdout and stderr on terminal.
-- `help`: Shows all avaliable commands.
-- ...
+- `reload`: Reloads the page.
+- `help`: Shows all available commands.
 
 ## Installation
+
+Requirements: Node.js 20.9 or newer.
 
 Clone this repository to your local machine
 
@@ -38,6 +40,12 @@ Install all dependencies
 npm install
 ```
 
+Create a `.env` file from `.env.example` and set your `IP_TOKEN` ([ipinfo.io](https://ipinfo.io/) token)
+
+```bash
+cp .env.example .env
+```
+
 Start this project for development
 
 ```bash
@@ -45,6 +53,15 @@ npm run dev
 ```
 
 The application will be running at localhost:3000.
+
+Lint and build
+
+```bash
+npm run lint
+npm run build
+```
+
+The production build is exported statically to the `out` directory.
 
 ## Contributing
 
