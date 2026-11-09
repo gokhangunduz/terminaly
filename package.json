@@ -11,24 +11,26 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@types/node": "22.10.5",
-    "@types/react": "18.3.3",
-    "@types/react-dom": "18.3.0",
     "animate.css": "^4.1.1",
-    "autoprefixer": "10.4.20",
-    "axios": "^1.7.9",
+    "axios": "^1.21.0",
     "devtools-detect": "^4.0.2",
-    "eslint": "9.18.0",
-    "eslint-config-next": "15.1.4",
-    "next": "15.1.4",
-    "postcss": "8.4.49",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "react-terminal": "^1.4.4",
-    "tailwindcss": "3.4.17",
-    "typescript": "5.7.3"
+    "next": "^16.4.5",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-terminal": "^1.4.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^10.14.0",
+    "eslint-config-next": "^16.4.5",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^6.0.3"
   }
 }
