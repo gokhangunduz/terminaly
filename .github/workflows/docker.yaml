@@ -11,22 +11,23 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
 
       - name: Extract Version from package.json
         id: project_version
-        run: echo "::set-output name=version::$(node -e 'console.log(require("./package.json").version)')"
-
-      - name: Build the Docker Image
-        run: |
-          docker build \
-            --file Dockerfile \
-            --tag gokhangunduz/gokhangunduzdev:${{ steps.project_version.outputs.version }} \
-            --build-arg IP_TOKEN=${{ secrets.IP_TOKEN }} \
-            .
+        run: echo "version=$(node -p 'require("./package.json").version')" >> "$GITHUB_OUTPUT"
 
       - name: Login to Docker Hub
-        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+        uses: docker/login-action@v4
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Push the Docker Image to Docker Hub
-        run: docker push gokhangunduz/gokhangunduzdev:${{ steps.project_version.outputs.version }}
+      - name: Build and Push the Docker Image
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          push: true
+          tags: gokhangunduz/gokhangunduzdev:${{ steps.project_version.outputs.version }}
+          build-args: |
+            IP_TOKEN=${{ secrets.IP_TOKEN }}
