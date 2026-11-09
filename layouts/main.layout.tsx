@@ -1,14 +1,12 @@
 "use client";
 
-import { ReactElement } from "react";
+import { ReactNode } from "react";
 import MainProvider from "../contexts/app.context";
 import { TerminalContextProvider as TerminalProvider } from "react-terminal";
 import VersionViewer from "@/components/versionviewer/versionviewer.component";
-import "@/styles/global.css";
-import "animate.css";
 
 interface IMainLayout {
-  children: ReactElement | ReactElement[];
+  children: ReactNode;
 }
 
 export default function MainLayout({ children }: IMainLayout) {
