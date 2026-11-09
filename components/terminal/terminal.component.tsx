@@ -12,12 +12,16 @@ export default function Terminal(): ReactElement {
 
   const commands = {
     whoami: <PreformattedLine stdout={JSON.stringify(me, null, 1)} />,
-    whatsmyip: <PreformattedLine stdout={JSON.stringify(ipInfo, null, 1)} />,
+    whatsmyip: ipInfo ? (
+      <PreformattedLine stdout={JSON.stringify(ipInfo, null, 1)} />
+    ) : (
+      <BasicLine stdout="IP information is not available right now. Please try again in a moment." />
+    ),
     reload: () => {
       window.location.reload();
     },
     help: (
-      <BasicLine stdout="Available commands: whoami, whatsmyip, reload, help" />
+      <BasicLine stdout="Available commands: whoami, whatsmyip, clear, reload, help" />
     ),
   };
 

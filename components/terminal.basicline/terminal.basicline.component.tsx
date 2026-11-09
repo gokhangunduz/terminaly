@@ -3,7 +3,7 @@
 import { ReactElement } from "react";
 
 interface ITerminalBasicLine {
-  stdout: string | Promise<string>;
+  stdout: string;
 }
 
 export default function TerminalBasicLine({
