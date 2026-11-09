@@ -1,30 +1,37 @@
 "use client";
 
 import { disableDevTools } from "@/functions/devtools.function";
-import { useEffect, createContext, useState, ReactElement } from "react";
+import { useEffect, createContext, useState, ReactNode } from "react";
 import { getIPwithInfo } from "../apis/apis";
-import { IiPInfo } from "../types/types";
+import { IiPInfo, IuseApp } from "../types/types";
 import me from "@/constants/me.json";
 
-export const AppContext: any = createContext<any>(null);
+export const AppContext = createContext<IuseApp | null>(null);
 
 interface IAppProvider {
-  children: ReactElement | ReactElement[];
+  children: ReactNode;
 }
-// eslint-disable-next-line
-export default ({ children }: IAppProvider) => {
+
+export default function AppProvider({ children }: IAppProvider) {
   const [ipInfo, setIpInfo] = useState<IiPInfo>();
 
-  useEffect(() => {
-    disableDevTools();
-    getIP();
-  }, []);
+  useEffect(() => disableDevTools(), []);
 
-  async function getIP() {
-    setIpInfo(await getIPwithInfo());
-  }
+  useEffect(() => {
+    let isActive = true;
+
+    getIPwithInfo()
+      .then((info) => isActive && setIpInfo(info))
+      .catch(() => {
+        // ip info is optional, the terminal handles the missing value
+      });
+
+    return () => {
+      isActive = false;
+    };
+  }, []);
 
   return (
     <AppContext.Provider value={{ me, ipInfo }}>{children}</AppContext.Provider>
   );
-};
+}
