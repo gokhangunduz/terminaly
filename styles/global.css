@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 ::-webkit-scrollbar {
   display: none;
@@ -11,9 +9,11 @@
 }
 
 div {
-  @apply !top-[1px];
+  top: 1px !important;
 }
 
 span {
-  @apply !top-[1px] !h-4 !w-2;
+  top: 1px !important;
+  height: 1rem !important;
+  width: 0.5rem !important;
 }
